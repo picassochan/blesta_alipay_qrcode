@@ -1,0 +1,23 @@
+
+	<ul>
+		<li>
+			<?php
+			$this->Form->label($this->_("AlipayQrcode.appid", true), "alipayqrcode_appid");
+			$this->Form->fieldText('alipayqrcode_appid', $this->Html->ifSet($meta['alipayqrcode_appid']), ['id'=>'alipayqrcode_appid']);
+			?>
+		</li>
+		<li>
+			<?php
+			$this->Form->label($this->_("AlipayQrcode.publickey", true), "alipayqrcode_publickey");
+			$this->Form->fieldTextArea('alipayqrcode_publickey', $this->Html->ifSet($meta['alipayqrcode_publickey']), ['id'=>'alipayqrcode_publickey', 'style'=>'width:600px; height:80px']);
+			?>
+			<span class="tooltip"><?php $this->_("AppController.tooltip.text");?><div><?php $this->_("AlipayQrcode.publickey_note");?></div></span>
+		</li>
+		<li>
+            <?php
+            $this->Form->label($this->_("AlipayQrcode.privatekey", true), "alipayqrcode_privatekey");
+            $this->Form->fieldTextArea('alipayqrcode_privatekey', $this->Html->ifSet($meta['alipayqrcode_privatekey']), ['id'=>'alipayqrcode_privatekey', 'style'=>'width:600px; height:240px']);
+            ?>
+            <span class="tooltip"><?php $this->_("AppController.tooltip.text");?><div><?php $this->_("AlipayQrcode.privatekey_note");?></div></span>
+        </li>
+	</ul>
